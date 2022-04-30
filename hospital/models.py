@@ -16,7 +16,7 @@ class Doctor(models.Model):
     profile_pic= models.ImageField(upload_to='profile_pic/DoctorProfilePic/',null=True,blank=True)
     address = models.CharField(max_length=40)
     mobile = models.CharField(max_length=20,null=True)
-    department= models.CharField(max_length=50,choices=departments,default='Cardiologist')
+    department= models.CharField(max_length=50,choices=departments,default='ENT')
     status=models.BooleanField(default=False)
     age = models.CharField(max_length=255)
     qualification = models.CharField(max_length=40)

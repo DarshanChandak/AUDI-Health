@@ -445,6 +445,7 @@ def discharge_patient_view(request,pk):
         pDD.OtherCharge=int(request.POST['OtherCharge'])
         pDD.total=(int(request.POST['roomCharge'])*int(d))+int(request.POST['doctorFee'])+int(request.POST['medicineCost'])+int(request.POST['OtherCharge'])
         pDD.save()
+        patient.delete()
         return render(request,'hospital/patient_final_bill.html',context=patientDict)
     return render(request,'hospital/patient_generate_bill.html',context=patientDict)
 
@@ -822,7 +823,7 @@ def patient_discharge_view(request):
         'patient':patient,
         'patientId':patient.id,
         'patientName':patient.fname,
-        'assignedDoctorName':dischargeDetails[0].doctorName,
+        # 'assignedDoctorName':dischargeDetails[0].doctorName,
         'address':patient.address,
         'mobile':patient.mobile,
         'symptoms':patient.symptoms,
