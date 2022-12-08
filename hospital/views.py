@@ -102,7 +102,7 @@ def patient_signup_view(request):
 
 #-----------for checking user is doctor , patient or admin 
 def is_admin(user):
-    return user.groups.filter(name='ADMIN').exists()
+    return user.groups.filter(name = 'ADMIN').exists()
 def is_doctor(user):
     return user.groups.filter(name='DOCTOR').exists()
 def is_patient(user):
@@ -474,7 +474,7 @@ def download_pdf_view(request,pk):
     dischargeDetails=models.PatientDischargeDetails.objects.all().filter(patientId=pk).order_by('-id')[:1]
     dict={
         'patientName':dischargeDetails[0].patientName,
-        'assignedDoctorName':dischargeDetails[0].assignedDoctorName,
+        # 'assignedDoctorName':dischargeDetails[0].assignedDoctorName,
         'address':dischargeDetails[0].address,
         'mobile':dischargeDetails[0].mobile,
         'symptoms':dischargeDetails[0].symptoms,
@@ -585,7 +585,9 @@ def doctor_dashboard_view(request):
     'appointmentcount':appointmentcount,
     'patientdischarged':patientdischarged,
     'appointments':appointments,
+    
     'doctor':doctor,
+    'docname':doctor.fname,
     'docq':doctor.qualification,
     'docd':doctor.department,
     'docage':doctor.age,

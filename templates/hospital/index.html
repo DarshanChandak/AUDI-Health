@@ -56,11 +56,11 @@
 
         @-webkit-keyframes glow {
             from {
-                text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+                text-shadow: 0 0 10px white, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
             }
 
             to {
-                text-shadow: 0 0 20px #eeeeee, 0 0 30px #fa2d2d, 0 0 40px #fa2d2d, 0 0 50px #fa2d2d, 0 0 60px #fa2d2d, 0 0 70px #fa2d2d, 0 0 80px #fa2d2d;
+                text-shadow: 0 0 20px white, 0 0 30px #fa2d2d, 0 0 40px #fa2d2d, 0 0 50px #fa2d2d, 0 0 60px #fa2d2d, 0 0 70px #fa2d2d, 0 0 80px #fa2d2d;
             }
         }
 
@@ -107,7 +107,7 @@
 
 
     <!-- MENU -->
-    <section class="navbar navbar-default navbar-static-top" role="navigation">
+    <section class="navbar navbar-default navbar-static-top" role="navigation" style="color:white;">
         <div class="container" style="color:white;">
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -118,9 +118,7 @@
                 </ul>
             </div>
             <br>
-            <br>
-            <br>
-        
+
             <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon icon-bar"></span>
@@ -135,13 +133,11 @@
             <!-- MENU LINKS -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#top" class="smoothScroll">Home</a></li>
-                    <li><a href="#about" class="smoothScroll">About Us</a></li>
-                    <li><a href="#team" class="smoothScroll">Doctors</a></li>
-                    <li><a href="#testimonials" class="smoothScroll">Testimonials</a></li>
-                    <li><a href="#footer" class="smoothScroll">Contact Us</a></li>
-                    {% comment %} <li class="appointment-btn"><a href="#appointment">Make an Appointment</a></li> {% endcomment %}
-
+                    <li class="appointment-btn"><a href="#top" class="smoothScroll">Home</a></li>
+                    <li class="appointment-btn"><a href="#about" class="smoothScroll">About Us</a></li>
+                    <li class="appointment-btn"><a href="#team" class="smoothScroll">Doctors</a></li>
+                    <li class="appointment-btn"><a href="#testimonials" class="smoothScroll">Testimonials</a></li>
+                    <li class="appointment-btn"><a href="#footer" class="smoothScroll">Contact Us</a></li>
                 </ul>
             </div>
 
